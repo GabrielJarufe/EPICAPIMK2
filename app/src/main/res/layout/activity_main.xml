@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/soho1"
+    android:orientation="vertical"
+    tools:context=".activities.Models.MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/textSol"
+        android:textColor="#94FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/dataInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="YYYY-MM-DD"
+        android:inputType="textPersonName"
+        android:textColor="#94FFFFFF"
+        android:textColorLink="#000000"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBusca"
+            android:layout_width="223dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/borderbtn"
+            android:onClick="buscaData"
+            android:text="@string/procurarSol"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnLimpar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/borderbtn"
+            android:text="@string/btnLimpar"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSharedData"
+            android:layout_width="223dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/borderbtn"
+            android:text="Usar última data digitada"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/borderbtn"
+            android:text="salvar data"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bordatxt"
+        android:textColor="#9CFFFFFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bordatxt"
+        android:textColor="#9CFFFFFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textZ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bordatxt"
+        android:paddingBottom="0dp"
+        android:textColor="#9CFFFFFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quer saber mais sobre a SOHO? Clique no botão abaixo!"
+        android:textColor="#94FFFFFF" />
+
+    <Button
+        android:id="@+id/btnSaberMais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borderbtn"
+        android:text="Sobre a soho"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@drawable/bordatxt"
+        android:gravity="bottom"
+        android:text="@string/textomain1"
+        android:textColor="#9CFFFFFF"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnMaps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/borderbtn"
+        android:text="@string/localizar_soho"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

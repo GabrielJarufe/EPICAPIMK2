@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">EPIC API</string>
+    <string name="dataid">YYYY-MM-DD</string>
+    <string name="procurarSol">Procurar</string>
+    <string name="SohoText">Nota: As coordenadas a seguir são detectadas por satélite em órbita na Terra! Desubra a distância entre você e o receptor de dados de satélite SOHO (NASA)</string>
+    <string name="localizar">Localizar</string>
+    <string name="textSol">Informe a data para conseguir o posicionamento do Sol!</string>
+    <string name="loading">Carregando...</string>
+    <string name="str_empty">"  "</string>
+    <string name="no_search_term">Informe um termo de busca</string>
+    <string name="no_network">vertifique sua conexão</string>
+    <string name="objActivitiesString"><![CDATA[O projeto Do Observatório Solar & Heliosférico (SOHO) é um esforço cooperativo entre a Agência Espacial Europeia (ESA) e a NASA. O SOHO foi projetado para estudar a estrutura interna do Sol, sua extensa atmosfera externa e a origem do vento solar, o fluxo de gás altamente ionizado que sopra continuamente para fora através do Sistema Solar.  SOHO foi lançado em 2 de dezembro de 1995. A espaçonave SOHO foi construída na Europa por uma equipe da indústria liderada por Matra, e os instrumentos foram fornecidos por cientistas europeus e americanos. A NASA foi responsável pelo lançamento e agora é responsável pelas operações da missão. Grandes antenas de rádio ao redor do mundo que formam a Rede Espacial Profunda da NASA são usadas para rastrear a espaçonave além da órbita da Terra. O controle da missão está baseado no Goddard Space Flight Center da NASA em Maryland.  O SOHO deveria operar até 1998, mas foi tão bem sucedido que a ESA e a NASA decidiram prolongar sua vida várias vezes e endossaram várias extensões da missão.]]></string>
+    <string name="NomeSoho"><![CDATA[Observatório Solar & Heliosférico (SOHO)]]></string>
+    <string name="title_activity_localiza_sohoe_usuario">Map</string>
+    <string name="localizar_soho">localizar observatório da SOHO</string>
+    <string name="btnLimpar">Remover data selecionada</string>
+    <string name="textomain1">Nota: As coordenadas a seguir são detectadas por satélite em órbita da Terra! Descubra a distância entre você e o receptor de dados do satélite SOHO</string>
+</resources>

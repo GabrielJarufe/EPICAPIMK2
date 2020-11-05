@@ -15,4 +15,10 @@
     <string name="localizar_soho">localizar observatório da SOHO</string>
     <string name="btnLimpar">Remover data selecionada</string>
     <string name="textomain1">Nota: As coordenadas a seguir são detectadas por satélite em órbita da Terra! Descubra a distância entre você e o receptor de dados do satélite SOHO</string>
+    <string name="ver_pesquisas_passadas">Ver Pesquisas Passadas</string>
+    <string name="sobre_a_soho">Sobre a soho</string>
+    <string name="quer_saber_mais_sobre_a_soho_clique_no_bot_o_abaixo">Quer saber mais sobre a SOHO? Clique no botão abaixo!</string>
+    <string name="psx">PsX:</string>
+    <string name="psy">PsY:</string>
+    <string name="psz">PsZ:</string>
 </resources>

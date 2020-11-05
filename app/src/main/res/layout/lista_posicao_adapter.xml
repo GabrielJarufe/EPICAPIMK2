@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="53dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textPsX6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borderbtn"
+                android:text="@string/psx"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textPsX7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borderbtn"
+                android:text="@string/psy"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textPsX5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borderbtn"
+                android:text="@string/psz"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textPsXa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borderbtn"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textPsYa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borderbtn"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textPsZa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borderbtn"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textData"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/borderbtn"
+                android:text="Data Pesquisada"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textDataPesq"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/borderbtn"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

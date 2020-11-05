@@ -14,7 +14,10 @@ public class NetworkUtils {
 
     // Constantes utilizadas pela API
     // URL para a API de Livros do Google.
+
+
     private static String NASA_URL = "https://api.nasa.gov/EPIC/api/natural/date/";
+    private static String NASA_URL2 = "https://api.nasa.gov/EPIC/api/natural/date/";
 
     private static final String API_KEY_PARAM = "api_key";
 
@@ -28,7 +31,7 @@ public class NetworkUtils {
         try {
             // Construção da URI de Busca
 
-            NASA_URL = NASA_URL+queryString;
+            NASA_URL = NASA_URL2+queryString;
 
             Uri builtURI = Uri.parse(NASA_URL).buildUpon()
                     .appendQueryParameter(API_KEY_PARAM,API_KEY)

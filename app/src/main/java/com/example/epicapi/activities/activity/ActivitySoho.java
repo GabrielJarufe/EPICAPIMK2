@@ -1,4 +1,4 @@
-package com.example.epicapi.activities;
+package com.example.epicapi.activities.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -16,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.epicapi.R;
-import com.example.epicapi.activities.Models.MainActivity;
 import com.example.epicapi.activities.Models.ObjActivitiesString;
 
 import java.io.File;

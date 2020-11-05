@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/soho1"
     android:orientation="vertical"
-    tools:context=".activities.Models.MainActivity">
+    tools:context=".activities.activity.MainActivity">
 
 
     <TextView
@@ -41,7 +41,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/borderbtn"
-            android:onClick="buscaData"
             android:text="@string/procurarSol"
             android:textColor="#FFFFFF" />
 
@@ -107,7 +106,7 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quer saber mais sobre a SOHO? Clique no botão abaixo!"
+        android:text="@string/quer_saber_mais_sobre_a_soho_clique_no_bot_o_abaixo"
         android:textColor="#94FFFFFF" />
 
     <Button
@@ -115,7 +114,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/borderbtn"
-        android:text="Sobre a soho"
+        android:text="@string/sobre_a_soho"
         android:textColor="#FFFFFF" />
 
     <TextView
@@ -136,6 +135,15 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/borderbtn"
         android:text="@string/localizar_soho"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnBanco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/borderbtn"
+        android:text="@string/ver_pesquisas_passadas"
         android:textColor="#FFFFFF" />
 
 </LinearLayout>

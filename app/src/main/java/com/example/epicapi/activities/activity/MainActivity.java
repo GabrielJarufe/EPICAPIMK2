@@ -1,4 +1,4 @@
-package com.example.epicapi.activities.Models;
+package com.example.epicapi.activities.activity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,8 +22,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.epicapi.R;
-import com.example.epicapi.activities.ActivitySoho;
-import com.example.epicapi.activities.LocalizaSohoeUsuario;
+import com.example.epicapi.activities.Models.CarregaData;
+import com.example.epicapi.activities.Models.ObjActivitiesDouble;
+import com.example.epicapi.activities.Models.ObjActivitiesString;
+import com.example.epicapi.activities.Models.Posicao;
+import com.example.epicapi.activities.helper.PosicaoDAO;
 
 
 import org.json.JSONArray;
@@ -43,6 +46,8 @@ public class MainActivity extends AppCompatActivity
     private Button btnMaps;
     private Button btnSharedData;
     private Button btnLimpar;
+    private Button btnBanco;
+    private Button btnBusca;
     private SharedPreferences mData;
     private String dateshared;
     private Button btnSalvar;
@@ -61,7 +66,9 @@ public class MainActivity extends AppCompatActivity
         btnSharedData = findViewById(R.id.btnSharedData);
         btnLimpar = findViewById(R.id.btnLimpar);
         btnSalvar = findViewById(R.id.btnSalvar);
-        mData = getSharedPreferences("datafile",0);
+        btnBanco = findViewById(R.id.btnBanco);
+        btnBusca = findViewById(R.id.btnBusca);
+        mData = getSharedPreferences("datafile", 0);
 
 
         btnSalvar.setOnClickListener(new View.OnClickListener() {
@@ -83,7 +90,7 @@ public class MainActivity extends AppCompatActivity
         nmData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(
                         nmData.getWindowToken(), 0);
                 showDatePickerDialog();
             }
@@ -96,14 +103,22 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        btnBanco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ActivityBanco.class);
+                startActivity(intent);
+            }
+        });
+
         btnSaberMais.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ObjActivitiesString objActivitiesString = new ObjActivitiesString("Observatório Solar & Heliosférico(SOHO)","O projeto Do Observatório Solar & Heliosférico (SOHO) é um esforço cooperativo entre a Agência Espacial Europeia (ESA) e a NASA. O SOHO foi projetado para estudar a estrutura interna do Sol, sua extensa atmosfera externa e a origem do vento solar, o fluxo de gás altamente ionizado que sopra continuamente para fora através do Sistema Solar.\n SOHO foi lançado em 2 de dezembro de 1995. A espaçonave SOHO foi construída na Europa por uma equipe da indústria liderada por Matra, e os instrumentos foram fornecidos por cientistas europeus e americanos. A NASA foi responsável pelo lançamento e agora é responsável pelas operações da missão. Grandes antenas de rádio ao redor do mundo que formam a Rede Espacial Profunda da NASA são usadas para rastrear a espaçonave além da órbita da Terra. O controle da missão está baseado no Goddard Space Flight Center da NASA em Maryland.\n O SOHO deveria operar até 1998, mas foi tão bem sucedido que a ESA e a NASA decidiram prolongar sua vida várias vezes e endossaram várias extensões da missão.\n ");
+                ObjActivitiesString objActivitiesString = new ObjActivitiesString("Observatório Solar & Heliosférico(SOHO)", "O projeto Do Observatório Solar & Heliosférico (SOHO) é um esforço cooperativo entre a Agência Espacial Europeia (ESA) e a NASA. O SOHO foi projetado para estudar a estrutura interna do Sol, sua extensa atmosfera externa e a origem do vento solar, o fluxo de gás altamente ionizado que sopra continuamente para fora através do Sistema Solar.\n SOHO foi lançado em 2 de dezembro de 1995. A espaçonave SOHO foi construída na Europa por uma equipe da indústria liderada por Matra, e os instrumentos foram fornecidos por cientistas europeus e americanos. A NASA foi responsável pelo lançamento e agora é responsável pelas operações da missão. Grandes antenas de rádio ao redor do mundo que formam a Rede Espacial Profunda da NASA são usadas para rastrear a espaçonave além da órbita da Terra. O controle da missão está baseado no Goddard Space Flight Center da NASA em Maryland.\n O SOHO deveria operar até 1998, mas foi tão bem sucedido que a ESA e a NASA decidiram prolongar sua vida várias vezes e endossaram várias extensões da missão.\n ");
 
                 Intent intent = new Intent(getApplicationContext(), ActivitySoho.class);
-                intent.putExtra("nome","Observatório Solar & Heliosférico(SOHO)");
-                intent.putExtra("text","O projeto Do Observatório Solar & Heliosférico (SOHO) é um esforço cooperativo entre a Agência Espacial Europeia (ESA) e a NASA. O SOHO foi projetado para estudar a estrutura interna do Sol, sua extensa atmosfera externa e a origem do vento solar, o fluxo de gás altamente ionizado que sopra continuamente para fora através do Sistema Solar.\n" +
+                intent.putExtra("nome", "Observatório Solar & Heliosférico(SOHO)");
+                intent.putExtra("text", "O projeto Do Observatório Solar & Heliosférico (SOHO) é um esforço cooperativo entre a Agência Espacial Europeia (ESA) e a NASA. O SOHO foi projetado para estudar a estrutura interna do Sol, sua extensa atmosfera externa e a origem do vento solar, o fluxo de gás altamente ionizado que sopra continuamente para fora através do Sistema Solar.\n" +
                         "\n" +
                         "SOHO foi lançado em 2 de dezembro de 1995. A espaçonave SOHO foi construída na Europa por uma equipe da indústria liderada por Matra, e os instrumentos foram fornecidos por cientistas europeus e americanos. A NASA foi responsável pelo lançamento e agora é responsável pelas operações da missão. Grandes antenas de rádio ao redor do mundo que formam a Rede Espacial Profunda da NASA são usadas para rastrear a espaçonave além da órbita da Terra. O controle da missão está baseado no Goddard Space Flight Center da NASA em Maryland.\n" +
                         "\n" +
@@ -118,14 +133,22 @@ public class MainActivity extends AppCompatActivity
         btnMaps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ObjActivitiesDouble objActivitiesDouble = new ObjActivitiesDouble(28.573967,-80.648898);
+                ObjActivitiesDouble objActivitiesDouble = new ObjActivitiesDouble(28.573967, -80.648898);
                 Intent intent = new Intent(getApplicationContext(), LocalizaSohoeUsuario.class);
-                intent.putExtra("objeto_nasa",objActivitiesDouble);
+                intent.putExtra("objeto_nasa", objActivitiesDouble);
                 startActivity(intent);
             }
         });
 
+        btnBusca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buscaData(nmData);
+
+            }
+        });
     }
+
 
 
     private void showDatePickerDialog() {
@@ -142,7 +165,6 @@ public class MainActivity extends AppCompatActivity
 
     public void buscaData(View view) {
         // Recupera a string de busca.
-
         String queryString = nmData.getText().toString();
         // esconde o teclado qdo o botão é clicado
         InputMethodManager inputManager = (InputMethodManager)
@@ -216,13 +238,20 @@ public class MainActivity extends AppCompatActivity
             psY.setText("posição Y: " + y);
             psZ.setText("posição Z: " + z);
 
-
+            PosicaoDAO posicaoDAO = new PosicaoDAO(getApplicationContext());
+            Posicao posicao = new Posicao();
+            posicao.setPx(x);
+            posicao.setPy(y);
+            posicao.setPz(z);
+            posicao.setDatapesq( nmData.getText().toString());
+            posicaoDAO.salvar(posicao);
             //}
 
         } catch (Exception e) {
 
             e.printStackTrace();
         }
+
     }
 
 
@@ -238,22 +267,21 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-
     private void armazenar() {
 
-        dateshared=nmData.getText().toString();
+        dateshared = nmData.getText().toString();
 
         SharedPreferences.Editor preferencesEditor = mData.edit();
-        preferencesEditor.putString("data",dateshared);
+        preferencesEditor.putString("data", dateshared);
         preferencesEditor.apply();
 
     }
 
     private void recuperar() {
 
-        SharedPreferences sharedPreferences = getSharedPreferences("datafile",0);
+        SharedPreferences sharedPreferences = getSharedPreferences("datafile", 0);
 
-        String lastDateShared = sharedPreferences.getString("data",null );
+        String lastDateShared = sharedPreferences.getString("data", null);
         nmData.setText(lastDateShared);
 
 
@@ -264,6 +292,5 @@ public class MainActivity extends AppCompatActivity
         super.onDestroy();
 
     }
-
 }
 

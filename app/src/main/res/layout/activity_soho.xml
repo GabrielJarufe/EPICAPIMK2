@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/azulsoho"
-    tools:context=".activities.ActivitySoho">
+    tools:context=".activities.activity.ActivitySoho">
 
     <TextView
         android:id="@+id/TextoAct2"

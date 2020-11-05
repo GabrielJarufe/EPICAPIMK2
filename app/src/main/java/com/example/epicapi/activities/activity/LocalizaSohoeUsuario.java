@@ -1,4 +1,4 @@
-package com.example.epicapi.activities;
+package com.example.epicapi.activities.activity;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -119,8 +119,8 @@ public class LocalizaSohoeUsuario extends FragmentActivity implements OnMapReady
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             locationManager.requestLocationUpdates(
                     LocationManager.GPS_PROVIDER,
-                    300000000,
-                    200,
+                    10000,
+                    0,
                     locationListener
             );
         }

@@ -20,7 +20,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ImagemBaixada"></activity>
+        <activity android:name=".activities.activity.ActivityBanco"></activity>
+        <activity android:name=".activities.activity.ImagemBaixada" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -34,10 +35,10 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activities.LocalizaSohoeUsuario"
+            android:name=".activities.activity.LocalizaSohoeUsuario"
             android:label="@string/title_activity_localiza_sohoe_usuario" />
-        <activity android:name=".activities.ActivitySoho" />
-        <activity android:name=".activities.Models.MainActivity">
+        <activity android:name=".activities.activity.ActivitySoho" />
+        <activity android:name=".activities.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

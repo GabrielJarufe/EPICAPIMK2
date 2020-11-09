@@ -119,8 +119,8 @@ public class LocalizaSohoeUsuario extends FragmentActivity implements OnMapReady
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             locationManager.requestLocationUpdates(
                     LocationManager.GPS_PROVIDER,
+                    20000,
                     10000,
-                    0,
                     locationListener
             );
         }

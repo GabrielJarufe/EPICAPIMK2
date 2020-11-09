@@ -11,7 +11,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
     public static  int VERSION = 1;
     public static  String NOME_DB = "DB_NASA";
-    public static  String TABELA_POSICOES = "TB_Posicoes";
+    public static  String TABELA_POSICOES = "TB_Posicoess";
     public static  String IDPOS = "IdPos";
     public static  String POSICAOX = "pX";
     public static  String POSICAOY = "pY";
